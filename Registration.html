@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Techy Registration Form</title>
+
+  <!-- Fun and Techy Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00ffcc;
+      width: 350px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      transform: scale(1.05);
+      background-color: #00ffaa;
+    }
+
+    .sound-btn:active {
+      animation: pulse 0.2s;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://script.google.com/macros/s/AKfycbyd6qs2KLtC57dPv8hd_Cy4CA8wqXSHMM3X2LttnjW-RzUj24X0dwyoMhws7Adr1Wx5wQ/exec" method="POST">
+    <h2>🚀 Tech Registration Form</h2>
+
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Mail ID:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="education">Education Qualification:</label>
+    <input type="text" id="education" name="education" required>
+
+    <label for="phone">Phone No:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="mode">Select Mode:</label>
+    <select id="mode" name="mode" required>
+      <option value="Online">Online</option>
+      <option value="Offline">Offline</option>
+    </select>
+
+    <label for="course">Course Selection:</label>
+    <select id="course" name="course" required>
+      <option value="Python + MySQL">Python + MySQL</option>
+      <option value="Python + MS Office">Python + MS Office</option>
+      <option value="EICT">EICT (Electronics)</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Digital Marketing">Digital Marketing</option>
+      <option value="AI">AI & Generative AI</option>
+      <option value="Cybersecurity">Cybersecurity</option>
+      <option value="AWS">AWS</option>
+      <option value="Azure">Azure</option>
+      <option value="DevOps">DevOps</option>
+      <option value="Data Analytics">Data Analytics</option>
+    </select>
+
+    <input class="sound-btn" type="submit" value="⚡ Register Now!">
+  </form>
+
+  <!-- Sound effect for button click -->
+  <audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+  <script>
+    const btn = document.querySelector(".sound-btn");
+    const clickSound = document.getElementById("clickSound");
+
+    btn.addEventListener("click", () => {
+      clickSound.play();
+    });
+  </script>
+
+</body>
+</html>
